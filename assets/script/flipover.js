@@ -123,17 +123,17 @@ function incrementSeconds() {
 <iframe allow="autoplay" style="display: none"></iframe>;
 
 function play() {
-  let audio = new Audio("../assets/media/rightanswer-bell.wav");
+  let audio = new Audio("../media/rightanswer-bell.wav");
   audio.play();
 }
 
 function cardflip() {
-  let audio = new Audio("../assets/media/cardflip.mp3");
+  let audio = new Audio("../media/cardflip.mp3");
   audio.play();
 }
 
 function fire() {
-  let audio = new Audio("../assets/media/fireworks.mp3");
+  let audio = new Audio("../media/fireworks.mp3");
   audio.play();
 }
 
