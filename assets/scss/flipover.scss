@@ -1,0 +1,221 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+
+.hero {
+  background-image: url(/assets/img/background.jpeg);
+  min-height: 60rem;
+  position: relative;
+  overflow: hidden;
+
+  &__content {
+    position: relative;
+    padding: 2rem 0;
+    // z-index: 2;
+    font-family: "Anton", sans-serif;
+    letter-spacing: 2px;
+  }
+  @media screen and (max-width: (800px)) {
+    &__content {
+      position: relative;
+      top: 0px;
+    }
+  }
+}
+
+.container {
+  max-width: 1630px;
+  margin: auto;
+  // z-index: 1;
+}
+
+canvas {
+  position: absolute;
+  display: block;
+  z-index: 1;
+}
+
+header {
+  text-align: center;
+  height: 150px;
+
+  .h1-container {
+    #ani {
+      letter-spacing: 5px;
+      font-size: 5vw;
+      color: rgb(78, 132, 231);
+      text-shadow: black 5px 5px 5px;
+
+      .letters {
+        color: rgba(245, 245, 245, 0.678);
+      }
+    }
+  }
+}
+
+// @media screen and (min-width: 320px) {
+//   .h1-container {
+//     width: 100%;
+//     #ani {
+//       letter-spacing: 5px;
+//       font-size: 14vw;
+//       padding: 20px;
+//       color: white;
+//       text-shadow: black 5px 5px 5px;
+//     }
+//   }
+// }
+
+//TIMERFUNCTION
+.grid {
+  display: grid;
+  grid-template-rows: auto;
+  justify-content: space-around;
+  position: absolute;
+  top: 160px;
+  // height: 140px;
+  width: 300px;
+  height: 500px;
+  padding: 50px 0;
+  margin: 0 25px;
+  text-align: center;
+  background-color: rgba(4, 4, 148, 0.534);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
+  text-shadow: rgba(0, 0, 0, 0.671) 3px 3px;
+  z-index: 1;
+
+  .alert-container {
+    display: block;
+    height: 100px;
+    #alert {
+      width: 100%;
+      font-size: 25px;
+      padding: 20px;
+      color: white;
+      text-shadow: black 5px 5px 5px;
+    }
+  }
+
+  .timer {
+    height: 100px;
+    padding: 0px;
+    p {
+      width: 100%;
+      font-size: 25px;
+      color: white;
+      text-shadow: black 5px 5px 5px;
+    }
+
+    // background-color: black;
+  }
+
+  .winner-container {
+    margin-top: 50px;
+    height: 100px;
+    padding: 15px;
+    display: block;
+    #winner {
+      width: 100%;
+      font-size: 25px;
+      padding: 20px;
+      color: white;
+      text-shadow: black 5px 5px 5px;
+      text-decoration: none;
+    }
+  }
+}
+
+.memory-game {
+  position: relative;
+  top: 30px;
+  width: 640px;
+  height: 420px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  perspective: 1000px;
+  z-index: 1;
+}
+
+.card {
+  width: calc(25% - 10px);
+  height: calc(33.333% - 10px);
+  margin: 5px;
+  position: relative;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+  transform: scale(1);
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+  border-radius: 15px;
+
+  &:active {
+    transform: scale(0.97);
+    transition: transform 0.2s;
+  }
+
+  .front-face,
+  .back-face {
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    position: absolute;
+    border-style: solid;
+    border-width: 5px;
+    border-color: rgba(0, 0, 255, 0.596);
+    border-radius: 15px;
+    backface-visibility: hidden;
+    background-image: url(/assets/img/starnight.jpeg);
+    background-position: center;
+    opacity: 98%;
+    background-size: cover;
+  }
+  .front-face {
+    transform: rotateY(180deg);
+    background: none;
+    background-color: rgb(107, 107, 107);
+  }
+}
+
+.card.flip {
+  transform: rotateY(180deg);
+}
+
+.snow {
+  z-index: 0;
+  position: absolute;
+  min-width: 100vw;
+  min-height: 100vh;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.snow .svg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+#snow-top-layer {
+  will-change: transform;
+  transform: translateY(-768px);
+  animation: fall 22.5s infinite linear;
+}
+
+#snow-bottom-layer {
+  will-change: transform;
+  transform: translateY(-768px);
+  animation: fall 45s infinite linear;
+}
+
+@keyframes fall {
+  100% {
+    transform: translateY(0);
+  }
+}
