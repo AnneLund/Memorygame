@@ -120,6 +120,8 @@ function incrementSeconds() {
   }
 }
 
+<iframe allow="autoplay" style="display: none"></iframe>;
+
 function play() {
   let audio = new Audio("../assets/media/rightanswer-bell.wav");
   audio.play();
