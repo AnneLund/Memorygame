@@ -141,7 +141,7 @@ header .h1-container #ani .letters {
   border-radius: 15px;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
-  background-image: url(./assets/img/starnight.jpeg);
+  background-image: url(../img/starnight.jpeg);
   background-position: center;
   opacity: 98%;
   background-size: cover;
