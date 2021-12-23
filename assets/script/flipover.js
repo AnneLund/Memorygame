@@ -120,14 +120,13 @@ function incrementSeconds() {
   }
 }
 
-<iframe allow="autoplay" style="display: none"></iframe>;
-
 function play() {
   let audio = new Audio("../media/rightanswer-bell.wav");
   audio.play();
 }
 
 function cardflip() {
+  <iframe allow="autoplay" style="display: none"></iframe>;
   let audio = new Audio("../media/cardflip.mp3");
   audio.play();
 }
