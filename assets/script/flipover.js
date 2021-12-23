@@ -126,7 +126,6 @@ function play() {
 }
 
 function cardflip() {
-  <iframe allow="autoplay" style="display: none"></iframe>;
   let audio = new Audio("../media/cardflip.mp3");
   audio.play();
 }
