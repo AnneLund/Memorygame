@@ -121,12 +121,12 @@ function incrementSeconds() {
 }
 
 function play() {
-  let audio = new Audio("../media/rightanswer-bell.wav");
+  let audio = new Audio("./media/rightanswer-bell.wav");
   audio.play();
 }
 
 function cardflip() {
-  let audio = new Audio("../media/cardflip.mp3");
+  let audio = new Audio("./media/cardflip.mp3");
   audio.play();
 }
 
